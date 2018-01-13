@@ -9,6 +9,7 @@ public class StationEntity implements Serializable{
     private int id;
     private String name;
     private String position;
+    private String password;
     private Timestamp created_at;
     private Timestamp started_at;
 
@@ -16,11 +17,12 @@ public class StationEntity implements Serializable{
         super();
     }
 
-    public StationEntity(int id, String name, String position,Timestamp created_at,Timestamp started_at) {
+    public StationEntity(int id, String name, String position,String password,Timestamp created_at,Timestamp started_at) {
         super();
         this.id = id;
         this.name = name;
         this.position = position;
+        this.password = password;
         this.created_at = created_at;
         this.started_at = started_at;
     }
@@ -64,5 +66,13 @@ public class StationEntity implements Serializable{
 
     public void setStarted_at(Timestamp started_at) {
         this.started_at = started_at;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 }

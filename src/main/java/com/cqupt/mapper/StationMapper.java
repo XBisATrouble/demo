@@ -6,7 +6,7 @@ import org.apache.ibatis.annotations.*;
 import java.util.List;
 
 public interface StationMapper {
-    @Select("SELECT * FROM stations")
+    @Select("SELECT id,name,position,created_at,started_at FROM stations")
     @Results({
             @Result(property = "id",  column = "id"),
             @Result(property = "name", column = "name"),
@@ -16,7 +16,7 @@ public interface StationMapper {
     })
     List<StationEntity> getAll();
 
-    @Select("SELECT * FROM stations WHERE id = #{id}")
+    @Select("SELECT id,name,position,password,created_at,started_at FROM stations WHERE id = #{id}")
     @Results({
             @Result(property = "id",  column = "id"),
             @Result(property = "name", column = "name"),
@@ -26,12 +26,15 @@ public interface StationMapper {
     })
     StationEntity getOne(int id);
 
-    @Insert("INSERT INTO stations (name,position,created_at,started_at) VALUES(#{name}, #{position}, #{created_at}, #{started_at})")
-    void insert(StationEntity user);
+    @Insert("INSERT INTO stations (name,position,password,created_at,started_at) VALUES(#{name}, #{position},#{password},now(), now())")
+    void insert(StationEntity station);
 
-    @Update("UPDATE stations SET name=#{name},position=#{position},created_at=#{created_at},started_at=#{started_at} WHERE id =#{id}")
-    void update(StationEntity user);
+    @Update("UPDATE stations SET name=#{name},position=#{position},started_at=now() WHERE id =#{id}")
+    void update(StationEntity station);
 
     @Delete("DELETE FROM stations WHERE id =#{id}")
     void delete(int id);
+
+    @Update("UPDATE stations SET password=#{password} WHERE id =#{id}")
+    void updatePassword(StationEntity station);
 }

@@ -2,7 +2,7 @@ package com.cqupt.domain.result;
 
 public class Response {
     /** 返回信息码*/
-    private String rspCode="000000";
+    private String rspCode="200";
     /** 返回信息内容*/
     private String rspMsg="操作成功";
 
@@ -39,8 +39,8 @@ public class Response {
     @Override
     public String toString() {
         return "Response{" +
-                "code='" + rspCode + '\'' +
-                ", message='" + rspMsg + '\'' +
+                "rspCode='" + rspCode + '\'' +
+                ", rspMsg='" + rspMsg + '\'' +
                 '}';
     }
 }
