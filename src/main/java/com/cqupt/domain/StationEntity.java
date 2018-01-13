@@ -1,4 +1,4 @@
-package com.cqupt.entity;
+package com.cqupt.domain;
 
 import java.io.Serializable;
 import java.sql.Timestamp;
