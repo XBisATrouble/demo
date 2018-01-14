@@ -22,7 +22,7 @@
 ### 接口说明 1、获取所有的监测站
 
 - **请求URL**
-> [http://111.231.64.125/v1/stations](http://111.231.64.125/v1/stations)
+> [http://api.xbbbbbb.cn/v1/stations](http://api.xbbbbbb.cn/v1/stations)
 
 
 - **请求方式** 
@@ -46,7 +46,7 @@
             "id": 1,
             "name": "重庆市监测站",
             "position": "重庆",
-            "password": null,
+            "password": "wreGyPgRvMY=",
             "created_at": "2018-01-13 23:01:24",
             "started_at": "2018-01-13 23:01:25"
         },
@@ -54,7 +54,7 @@
             "id": 2,
             "name": "成都市监测站",
             "position": "成都",
-            "password": null,
+            "password": "wreGyPgRvMY=",
             "created_at": "2018-01-13 17:36:26",
             "started_at": "2018-01-13 17:36:28"
         },
@@ -66,7 +66,7 @@
 ### 接口说明 2、获取单个监测站信息
 
 - **请求URL**
-> [http://111.231.64.125 /v1/station/{id}](http://111.231.64.125/v1/stations/{id})
+> [http://api.xbbbbbb.cn /v1/station/{id}](http://api.xbbbbbb.cn/v1/stations/{id})
 
 
 - **请求方式** 
@@ -100,7 +100,7 @@
 ### 接口说明 3、创建一个监测站
 
 - **请求URL**
-> [http://111.231.64.125/v1/station/{id}](http://111.231.64.125/v1/stations/{id})
+> [http://api.xbbbbbb.cn/v1/station/{id}](http://api.xbbbbbb.cn/v1/stations/{id})
 
 
 - **请求方式** 
@@ -143,7 +143,7 @@
 ### 接口说明 4、删除一个监测站
 
 - **请求URL**
-> [http://111.231.64.125/v1/station/{id}](http://111.231.64.125/v1/stations/{id})
+> [http://api.xbbbbbb.cn/v1/station/{id}](http://api.xbbbbbb.cn/v1/stations/{id})
 
 
 - **请求方式** 
@@ -170,7 +170,7 @@
 ### 接口说明 5、更新一个监测站内容
 
 - **请求URL**
-> [http://111.231.64.125/v1/station/{id}](http://111.231.64.125/v1/stations/{id})
+> [http://api.xbbbbbb.cn/v1/station/{id}](http://api.xbbbbbb.cn/v1/stations/{id})
 
 
 - **请求方式** 
@@ -211,7 +211,7 @@
 ### 接口说明 6、监测站用户登陆
 
 - **请求URL**
-> [http://111.231.64.125/v1/auth](http://111.231.64.125/v1/auth)
+> [http://api.xbbbbbb.cn/v1/auth](http://api.xbbbbbb.cn/v1/auth)
 
 
 - **请求方式** 
@@ -257,7 +257,7 @@
 ### 接口说明 7、监测站用户更改密码
 
 - **请求URL**
-> [http://111.231.64.125/v1/auth](http://111.231.64.125/v1/auth)
+> [http://api.xbbbbbb.cn/v1/auth](http://api.xbbbbbb.cn/v1/auth)
 
 
 - **请求方式** 
@@ -300,7 +300,7 @@
 ### 接口说明 1、获取单个空气质量
 
 - **请求URL**
-> [http://111.231.64.125/v1/station/{id}/quality](http://111.231.64.125/v1/station/{id}/quality)
+> [http://api.xbbbbbb.cn/v1/station/{id}/quality](http://api.xbbbbbb.cn/v1/station/{id}/quality)
 
 
 - **请求方式** 
@@ -334,7 +334,7 @@
 ### 接口说明 2、更新单个空气质量
 
 - **请求URL**
-> [http://111.231.64.125/v1/quality](http://111.231.64.125/v1/quality)
+> [http://api.xbbbbbb.cn/v1/quality](http://api.xbbbbbb.cn/v1/quality)
 
 
 - **请求方式** 
