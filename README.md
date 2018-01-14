@@ -112,6 +112,8 @@
 >| name |String|姓名|
 >|position|String|位置|
 >|password|String|密码|
+> |created_at|String|创建时间|
+> |started_at|String|启用时间|
 
 - **返回**
 > | 返回参数      |     参数类型 |   参数说明   |

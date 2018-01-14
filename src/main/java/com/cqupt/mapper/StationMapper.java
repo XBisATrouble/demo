@@ -26,7 +26,8 @@ public interface StationMapper {
     })
     StationEntity getOne(int id);
 
-    @Insert("INSERT INTO stations (name,position,password,created_at,started_at) VALUES(#{name}, #{position},#{password},now(), now())")
+    @Insert("INSERT INTO stations (name,position,password,created_at,started_at) VALUES(#{name}, #{position},#{password},${created_at}, ${started_at})")
+    @Options(useGeneratedKeys=true, keyProperty="id")//添加该行，product中的id将被自动添加
     void insert(StationEntity station);
 
     @Update("UPDATE stations SET name=#{name},position=#{position},started_at=now() WHERE id =#{id}")
