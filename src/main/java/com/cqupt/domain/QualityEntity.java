@@ -6,7 +6,7 @@ import java.sql.Timestamp;
 public class QualityEntity implements Serializable {
     private static final long serialVersionUID = 1L;
     private int id;
-    private String station_id;
+    private int station_id;
     private String sources;
     private String sources_type;
     private String value;
@@ -17,15 +17,19 @@ public class QualityEntity implements Serializable {
         super();
     }
 
-    public QualityEntity(int id, String station_id, String sources, String sources_type, String value, Timestamp created_at, Timestamp updated_at) {
+    public QualityEntity(int station_id, String sources, String sources_type, String value, Timestamp created_at, Timestamp updated_at) {
         super();
-        this.id = id;
         this.station_id = station_id;
         this.sources = sources;
         this.sources_type = sources_type;
         this.value = value;
         this.created_at = created_at;
         this.updated_at = updated_at;
+    }
+
+    public QualityEntity(int station_id) {
+        super();
+        this.station_id = station_id;
     }
 
     public int getId() {
@@ -36,11 +40,11 @@ public class QualityEntity implements Serializable {
         this.id = id;
     }
 
-    public String getStation_id() {
+    public int getStation_id() {
         return station_id;
     }
 
-    public void setStation_id(String station_id) {
+    public void setStation_id(int station_id) {
         this.station_id = station_id;
     }
 

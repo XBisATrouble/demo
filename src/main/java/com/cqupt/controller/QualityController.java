@@ -31,4 +31,14 @@ public class QualityController {
         qualityMapper.insert(quality);
         return new ResponseData(ExceptionMsg.SUCCESS,quality);
     }
+
+    @RequestMapping(value = "/quality",method = RequestMethod.PUT)
+    public ResponseData update(@ModelAttribute QualityEntity quality){
+        try {
+            qualityMapper.update(quality);
+            return new ResponseData(ExceptionMsg.SUCCESSUPDATE,quality);
+        }catch (Exception e){
+            return new ResponseData(ExceptionMsg.DBERROR,e);
+        }
+    }
 }
