@@ -11,12 +11,17 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api")
+@RequestMapping("/v1")
 public class StationController {
 
     @Autowired
     private StationMapper stationMapper;
     private Crypt crypt = new Crypt();
+
+    @RequestMapping(value = "/",method = RequestMethod.GET)
+    public String  hello() {
+        return "Welcome";
+    }
 
     @RequestMapping(value = "/stations",method = RequestMethod.GET)
     public ResponseData index() {

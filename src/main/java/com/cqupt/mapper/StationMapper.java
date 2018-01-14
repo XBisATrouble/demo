@@ -6,7 +6,7 @@ import org.apache.ibatis.annotations.*;
 import java.util.List;
 
 public interface StationMapper {
-    @Select("SELECT id,name,position,created_at,started_at FROM stations")
+    @Select("SELECT id,name,position,password,created_at,started_at FROM stations")
     @Results({
             @Result(property = "id",  column = "id"),
             @Result(property = "name", column = "name"),
