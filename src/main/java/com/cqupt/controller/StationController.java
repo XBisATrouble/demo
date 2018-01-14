@@ -29,7 +29,7 @@ public class StationController {
     }
 
     @RequestMapping(value = "/stations",method = RequestMethod.GET)
-    public ResponseData index(int limit,int page) {
+    public ResponseData index(@RequestParam(value = "limit", defaultValue = "10") int limit, @RequestParam(value = "page", defaultValue = "1") int page) {
         PageHelper.startPage(page,limit);
         List<StationEntity> stations =  stationMapper.getAll();
 
