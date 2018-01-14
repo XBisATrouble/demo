@@ -7,6 +7,7 @@ import com.cqupt.domain.result.ResponseData;
 import com.cqupt.helper.Crypt;
 import com.cqupt.mapper.QualityMapper;
 import com.cqupt.mapper.StationMapper;
+import com.github.pagehelper.PageHelper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -24,12 +25,14 @@ public class StationController {
 
     @RequestMapping(value = "/",method = RequestMethod.GET)
     public String  hello() {
-        return "Welcome";
+        return "Welcome123";
     }
 
     @RequestMapping(value = "/stations",method = RequestMethod.GET)
-    public ResponseData index() {
+    public ResponseData index(int limit,int page) {
+        PageHelper.startPage(page,limit);
         List<StationEntity> stations =  stationMapper.getAll();
+
         if (stations == null){
             return new ResponseData(ExceptionMsg.NOTFOUNDANYUSER,"/api/stations");
         }

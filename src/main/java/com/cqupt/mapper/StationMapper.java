@@ -32,7 +32,7 @@ public interface StationMapper {
     @Options(useGeneratedKeys=true, keyProperty="id")//添加该行，product中的id将被自动添加
     void insert(StationEntity station);
 
-    @Update("UPDATE stations SET name=#{name},position=#{position},started_at=now() WHERE id =#{id}")
+    @Update("UPDATE stations SET name=#{name},position=#{position},created_at=#{created_at},started_at=#{started_at} WHERE id =#{id}")
     void update(StationEntity station);
 
     @Delete("DELETE FROM stations WHERE id =#{id}")

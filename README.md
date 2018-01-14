@@ -22,7 +22,7 @@
 ### 接口说明 1、获取所有的监测站
 
 - **请求URL**
-> [http://api.xbbbbbb.cn/v1/stations](http://api.xbbbbbb.cn/v1/stations)
+> [http://api.xbbbbbb.cn/v1/stations?limit={limit}&page={page}](http://api.xbbbbbb.cn/v1/stations)
 
 
 - **请求方式** 
