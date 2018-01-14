@@ -170,7 +170,7 @@
 ### 接口说明 5、更新一个监测站内容
 
 - **请求URL**
-> [http://111.231.64.125/v1/station](http://111.231.64.125/v1/station)
+> [http://111.231.64.125/v1/station/{id}](http://111.231.64.125/v1/stations/{id})
 
 
 - **请求方式** 
@@ -179,7 +179,6 @@
 - **请求参数**
 > | 请求参数      |     参数类型 |   参数说明   |
 >| :-------- | :--------| :------ |
-> |id|int|监测站id|
 >| name |String|姓名|
 >|position|String|位置|
 >|password|String|密码|
@@ -293,5 +292,83 @@
         "created_at": "2018-01-14 00:37:19",
         "started_at": "2018-01-14 00:45:15"
     }
+}
+```
+
+## 空气质量
+
+### 接口说明 1、获取单个空气质量
+
+- **请求URL**
+> [http://111.231.64.125/v1/station/{id}/quality](http://111.231.64.125/v1/station/{id}/quality)
+
+
+- **请求方式** 
+>**GET**
+
+- **返回**
+> | 返回参数      |     参数类型 |   参数说明   |
+>| :-------- | :--------| :------ |
+>| rspCode| String | 执行结果code|
+>| rspMsg | String | 信息|
+>| data | Object | 监测站实例|
+
+- **返回示例**
+>    
+```json
+{
+	"rspCode": "200",
+	"rspMsg": "操作成功",
+	"data": {
+		"id": 1,
+		"station_id": 10000,
+		"sources": "自动同步",
+		"sources_type": "pm2.5",
+		"value": "180",
+		"created_at": "2018-01-14 09:02:30",
+		"updated_at": "2018-01-14 09:02:32"
+	}
+}
+```
+
+### 接口说明 2、更新单个空气质量
+
+- **请求URL**
+> [http://111.231.64.125/v1/quality](http://111.231.64.125/v1/quality)
+
+
+- **请求方式** 
+>**PUT**
+
+- **请求参数**
+> | 请求参数      |     参数类型 |   参数说明   |
+>| :-------- | :--------| :------ |
+>| id|int|空气质量的id|
+>|sources|String||
+>|sources_type|String||
+>|value|String||
+
+- **返回**
+> | 返回参数      |     参数类型 |   参数说明   |
+>| :-------- | :--------| :------ |
+>| rspCode| String | 执行结果code|
+>| rspMsg | String | 信息|
+>| data | Object | 监测站实例|
+
+- **返回示例**
+>    
+```json
+{
+	"rspCode": "200",
+	"rspMsg": "操作成功",
+	"data": {
+		"id": 1,
+		"station_id": 10000,
+		"sources": "自动同步",
+		"sources_type": "pm2.5",
+		"value": "180",
+		"created_at": "2018-01-14 09:02:30",
+		"updated_at": "2018-01-14 09:02:32"
+	}
 }
 ```

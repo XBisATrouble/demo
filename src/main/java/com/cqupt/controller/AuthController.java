@@ -25,6 +25,8 @@ public class AuthController {
             }else if (!crypt.decryptBasedDes(loginStationEntity.getPassword()).equals(stationEntity.getPassword())){
                 return new ResponseData(ExceptionMsg.PASSWORDERROR);
             }
+
+
             return new ResponseData(ExceptionMsg.SUCCESSLOGIN,loginStationEntity);
         }catch (Exception e){
             return new ResponseData(ExceptionMsg.ERROR,e);
