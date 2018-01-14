@@ -100,7 +100,7 @@
 ### 接口说明 3、创建一个监测站
 
 - **请求URL**
-> [http://api.xbbbbbb.cn/v1/station/{id}](http://api.xbbbbbb.cn/v1/stations/{id})
+> [http://api.xbbbbbb.cn/v1/station](http://api.xbbbbbb.cn/v1/station)
 
 
 - **请求方式** 
